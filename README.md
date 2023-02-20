@@ -16,7 +16,7 @@ https://jar-docs.vercel.app
 
 ## Features
 
-Jar uses a file-system router.
+Jar uses file-system routing.
 
 Pages are Python files that render content. They're put in the `pages` directory.
 
