@@ -219,7 +219,7 @@ def build(root):
             shutil.copyfile(file, copy_to)
 
     with open(os.path.join(build_dir, '.vercel/output/config.json'), 'w') as f:
-        json.dump(build_config, f)
+        json.dump(build_config, f, sort_keys=True)
 
 
 @click.command()
