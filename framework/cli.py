@@ -8,6 +8,7 @@ import importlib.util
 from pathlib import Path
 import distutils.dir_util
 
+
 class Request:
     def __init__(self, method, path, headers, body):
         self.method = method
@@ -152,21 +153,14 @@ def build(root):
                     }
                 print(f"build page: /{request_path}")
             else:
-                # fresh and regenerated pages need the same setup
-                # because they both output functions
+                # fresh and regenerated pages need the same setup because they both output functions
 
-                # create build output api function directory
                 func_dir = os.path.join(
                     build_dir, f".vercel/output/functions/{request_path}.func")
                 Path(func_dir).mkdir(parents=True)
-
-                # copy over all project files (yes, for each function)
                 copy_files(root_path, func_dir)
-
-                # get the relative-ish path so that that `app` can import the page function
                 module_location = os.sep.join(
                     path_parts[path_parts.index("pages"):])
-
                 create_handler(os.path.join(
                     func_dir, "__handler.py"), module_location)
 
@@ -217,6 +211,8 @@ def build(root):
                 build_dir, '.vercel/output/static/', os.path.basename(file))
             Path(os.path.dirname(copy_to)).mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, copy_to)
+            print(
+                f"public file: {copy_to[copy_to.index('output/static')+len('output/static'):]}")
 
     with open(os.path.join(build_dir, '.vercel/output/config.json'), 'w') as f:
         json.dump(build_config, f, sort_keys=True)
