@@ -122,7 +122,7 @@ The response that `render` returns is a tuple of `body, meta` where `meta` can h
 
 ### More on Packages
 
-If you are using packages (i.e. more than just the standard library) you have to install them locally inside your project before building the project with the CLI.
+If you are using packages (i.e. something you install with `pip`) you have to install them locally inside your project before building the project with the CLI.
 
 e.g. with `pip` you can run `pip3 install -r requirements.txt --target .`.
 
