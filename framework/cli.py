@@ -190,7 +190,6 @@ def build(root):
                         if fallback:
                             prerender_config["fallback"] = fallback_name
                         json.dump(prerender_config, f)
-
                     print(f"regenerate page: /{request_path}")
 
                 with open(os.path.join(func_dir, ".vc-config.json"), "w") as f:
