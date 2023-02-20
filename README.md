@@ -24,7 +24,7 @@ Public files (like CSS and other media files) go in the `public` directory and a
 - Fresh pages aka [Serverless Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/serverless-functions)
 - Regenerated pages aka [Prerender Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/prerender-functions)
 
-Checkout the source for the kitchen sink example, or this docs website.
+Checkout the source for the [kitchen sink example](https://github.com/healeycodes/jar/tree/main/examples/kitchensink), or [the docs website](https://github.com/healeycodes/jar/tree/main/examples/docs).
 
 A typical project is structured like this:
 
