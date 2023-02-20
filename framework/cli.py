@@ -72,12 +72,11 @@ def app(event, context):
     return call_render(page, event)
 
 
-def copy_files(source_dir, target_dir):
-    distutils.dir_util.copy_tree(source_dir, target_dir)
-
-
 def create_handler(path, module_location):
-    # behold the power of metaprogramming
+    # behold the power of metaprogramming!
+    # the following functions are used at build time to generated build pages
+    # and are also used on the server to generated fresh/regenerated pages
+    # so we bundle them into a handler file
     with open(path, "w") as f:
         # imports
         f.write("import json\nimport inspect\nimport importlib.util\n")
@@ -98,6 +97,10 @@ def create_handler(path, module_location):
         app_source = inspect.getsource(app)
         f.write(app_source.replace("__MODULE_LOCATION", module_location))
         f.write('\n')
+
+
+def copy_files(source_dir, target_dir):
+    distutils.dir_util.copy_tree(source_dir, target_dir)
 
 
 def build(root):
