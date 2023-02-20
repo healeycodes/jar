@@ -5,7 +5,7 @@ def render():
     text = """
 # Jar 🫙
 
-Jar is a toy Python framework, implemented in about 200 lines of code. It's open source.
+Jar is a toy Python framework, implemented in about 200 lines of code. It's [open source](https://github.com/healeycodes/jar).
 
 I built it to explore some ideas around framework APIs. Please don't actually use it.
 
@@ -25,7 +25,7 @@ Public files (like CSS and other media files) go in the `public` directory and a
 - Fresh pages aka [Serverless Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/serverless-functions)
 - Regenerated pages aka [Prerender Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/prerender-functions)
 
-Checkout the source for the kitchen sink example, or this docs website.
+Checkout the source for the [kitchen sink example](https://github.com/healeycodes/jar/tree/main/examples/kitchensink), or [this docs website](https://github.com/healeycodes/jar/tree/main/examples/docs).
 
 ### Build pages
 

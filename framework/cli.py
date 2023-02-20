@@ -4,7 +4,7 @@ import json
 import click
 import shutil
 import inspect
-import distutils
+import distutils.dir_util
 import importlib.util
 from pathlib import Path
 
