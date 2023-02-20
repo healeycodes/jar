@@ -4,10 +4,9 @@ import json
 import click
 import shutil
 import inspect
-import distutils.dir_util
 import importlib.util
 from pathlib import Path
-
+import distutils.dir_util
 
 class Request:
     def __init__(self, method, path, headers, body):
@@ -77,6 +76,7 @@ def copy_files(source_dir, target_dir):
 
 
 def create_handler(path, module_location):
+    # behold the power of metaprogramming
     with open(path, "w") as f:
         # imports
         f.write("import json\nimport inspect\nimport importlib.util\n")
