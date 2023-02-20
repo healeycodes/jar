@@ -110,6 +110,12 @@ def config():
     }
 ```
 
+### More on the API
+
+The `data` and `config` functions are optional. Build pages don't have access to a request object.
+
+The response object is a tuple of `body, meta` where `meta` can be `{"status_code": 200, "headers": {"some":"header"}}`.
+
 ## Tests
 
 - `pip3 install -r framework/requirements.txt`
