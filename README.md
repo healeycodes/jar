@@ -1,3 +1,5 @@
+[![CI](https://github.com/healeycodes/jar/actions/workflows/ci.yml/badge.svg)](https://github.com/healeycodes/jar/actions/workflows/ci.yml)
+
 # Jar 🫙
 
 Jar is a toy Python framework, implemented in about 200 lines of code (see [cli.py](https://github.com/healeycodes/jar/blob/main/framework/cli.py)).
