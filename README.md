@@ -120,6 +120,12 @@ Build pages don't have access to a request object.
 
 The response that `render` returns is a tuple of `body, meta` where `meta` can have `status_code: int` and/or `headers: dict` keys e.g. `{"status_code": 200, "headers": {"some":"header"}}`.
 
+### More on Packages
+
+If you are using packages (i.e. more than just the standard library) you have to install them locally inside your project before building the project with the CLI.
+
+e.g. with `pip` you can run `pip3 install -r requirements.txt --target .`.
+
 ## Tests
 
 - `pip3 install -r framework/requirements.txt`
