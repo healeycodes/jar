@@ -20,11 +20,11 @@ Jar uses a file-system router.
 
 Pages are Python files that render content. They're put in the `pages` directory.
 
-Public files (like CSS and other media files) go in the `public` directory and are served from the root path.
-
 - Build pages aka [Static Files](https://vercel.com/docs/build-output-api/v3#vercel-primitives/static-files)
 - Fresh pages aka [Serverless Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/serverless-functions)
 - Regenerated pages aka [Prerender Functions](https://vercel.com/docs/build-output-api/v3#vercel-primitives/prerender-functions)
+
+Public files (like CSS and other media files) go in the `public` directory and are served from the root path.
 
 Checkout the source for the [kitchen sink example](https://github.com/healeycodes/jar/tree/main/examples/kitchensink), or [the docs website](https://github.com/healeycodes/jar/tree/main/examples/docs).
 
