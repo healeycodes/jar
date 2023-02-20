@@ -5,7 +5,7 @@ def render():
     text = """
 # Jar 🫙
 
-Jar is a toy Python framework, implemented in about 200 lines of code (see [cli.py](https://github.com/healeycodes/jar/blob/main/framework/cli.py)). It's [open source](https://github.com/healeycodes/jar).
+Jar is a toy Python web framework, implemented in about 200 lines of code (see [cli.py](https://github.com/healeycodes/jar/blob/main/framework/cli.py)). It's [open source](https://github.com/healeycodes/jar).
 
 I built it to explore some ideas around framework APIs. Please don't actually use it.
 
