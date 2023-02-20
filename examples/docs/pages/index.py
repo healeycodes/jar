@@ -11,7 +11,7 @@ I built it to explore some ideas around framework APIs. Please don't actually us
 
 It deploys to Vercel via the [Build Output API](https://vercel.com/docs/build-output-api/v3). 
 
-This website runs on Jar!
+It's called Jar because it has almost no features and you need to fill it up yourself!
 
 ## Features
 
