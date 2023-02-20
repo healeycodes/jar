@@ -32,10 +32,10 @@ A typical project is structured like this:
 
 ```text
 project/
-├─ public/
-│  ├─ favicon.ico
 ├─ pages/
 │  ├─ index.py
+├─ public/
+│  ├─ favicon.ico
 ```
 
 ### Build pages

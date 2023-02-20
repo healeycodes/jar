@@ -29,10 +29,10 @@ A typical project is structured like this:
 
 ```text
 project/
-├─ public/
-│  ├─ favicon.ico
 ├─ pages/
 │  ├─ index.py
+├─ public/
+│  ├─ favicon.ico
 ```
 
 Checkout the source for the [kitchen sink example](https://github.com/healeycodes/jar/tree/main/examples/kitchensink), or [this docs website](https://github.com/healeycodes/jar/tree/main/examples/docs).
