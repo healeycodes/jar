@@ -130,8 +130,11 @@ e.g. with `pip` you can run `pip3 install -r requirements.txt --target .`.
     return f"""
 <html>
 <head>
+    <title>Jar</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="water.css">
+    <meta name="description" content="A toy Python web framework, implemented in about 200 lines of code.">
+    <link rel="stylesheet" href="/water.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
 </head>
 <body>
