@@ -1,16 +1,17 @@
+import marko
+
+
+def render():
+    text = """
 # Jar 🫙
 
-Jar is a toy Python framework, implemented in about 200 lines of code (see cli.py).
+Jar is a toy Python framework, implemented in about 200 lines of code. It's open source.
 
 I built it to explore some ideas around framework APIs. Please don't actually use it.
 
 It deploys to Vercel via the [Build Output API](https://vercel.com/docs/build-output-api/v3). 
 
-It's called Jar because it has almost no features and you need to fill it up yourself!
-
-## Docs
-
-https://jar-docs.vercel.app
+This website runs on Jar!
 
 ## Features
 
@@ -100,20 +101,19 @@ def config():
     }
 ```
 
-## Tests
-
-- `pip3 install -r framework/requirements.txt`
-- `pytest`
-
-## Deploy Docs
-
-- `pip3 install -r framework/requirements.txt`
-- `cd examples/docs && pip3 install -r requirements.txt --target . && cd ../..`
-- `python3 framework/cli.py build examples/docs`
-- `cd build && vercel --prebuilt --prod && cd ..`
-
-## Deploy Kitchen Sink
-
-- `pip3 install -r framework/requirements.txt`
-- `python3 framework/cli.py build examples/kitchensink`
-- `cd build && vercel --prebuilt`
+<br>
+"""
+    return f"""
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="water.css">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    {marko.convert(text)}
+    <script src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
+""", {}
