@@ -26,6 +26,16 @@ Public files (like CSS and other media files) go in the `public` directory and a
 
 Checkout the source for the kitchen sink example, or this docs website.
 
+A typical project is structured like this:
+
+```text
+project/
+├─ public/
+│  ├─ favicon.ico
+├─ pages/
+│  ├─ index.py
+```
+
 ### Build pages
 
 Generated once at build time. Served as a static file.
