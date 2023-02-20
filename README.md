@@ -114,9 +114,11 @@ def config():
 
 ### More on the API
 
-The `data` and `config` functions are optional. Build pages don't have access to a request object.
+The `data` and `config` functions are optional. The properties that `config` returns defines the type of page. The default page is a build page.
 
-The response object is a tuple of `body, meta` where `meta` can be `{"status_code": 200, "headers": {"some":"header"}}`.
+Build pages don't have access to a request object.
+
+The response that `render` returns is a tuple of `body, meta` where `meta` can have `status_code: int` and/or `headers: dict` keys e.g. `{"status_code": 200, "headers": {"some":"header"}}`.
 
 ## Tests
 
