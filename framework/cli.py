@@ -43,7 +43,6 @@ def call_render(page, event=None):
     request = None
     if event:
         request = Request.from_event(event)
-
     data = call_data(page, request)
 
     # data is an optional arg for render()
