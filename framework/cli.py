@@ -157,7 +157,6 @@ def build(root):
                 print(f"build page: /{request_path}")
             else:
                 # fresh and regenerated pages need the same setup because they both output functions
-
                 func_dir = os.path.join(
                     build_dir, f".vercel/output/functions/{request_path}.func")
                 Path(func_dir).mkdir(parents=True)
