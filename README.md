@@ -12,7 +12,7 @@ It's called Jar because it has almost no features and you need to fill it up you
 
 ## Docs
 
-https://jar-docs.vercel.app
+https://jar-docs.vercel.app (built with Jar obviously!)
 
 ## Features
 
