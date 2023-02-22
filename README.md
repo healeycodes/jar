@@ -3,6 +3,8 @@
 # Jar 🫙
 > My blog post: [My Own Python Web Framework](https://healeycodes.com/my-own-python-web-framework)
 
+<br>
+
 Jar is a toy Python web framework, implemented in about 200 lines of code (see [cli.py](https://github.com/healeycodes/jar/blob/main/framework/cli.py)).
 
 I built it to explore some ideas around framework APIs. Please don't actually use it.
