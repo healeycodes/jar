@@ -133,10 +133,7 @@ e.g. with `pip` you can run `pip3 install -r requirements.txt --target .` at the
 
 ## Deploy Docs
 
-- `pip3 install -r framework/requirements.txt`
-- `cd examples/docs && pip3 install -r requirements.txt --target . && cd ../..`
-- `python3 framework/cli.py build examples/docs`
-- `cd build && vercel --prebuilt --prod && cd ..`
+`./deploy-docs.sh`
 
 ## Deploy Kitchen Sink
 
