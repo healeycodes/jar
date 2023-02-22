@@ -125,6 +125,8 @@ If you are using packages (i.e. something you install with `pip`) you have to in
 
 e.g. with `pip` you can run `pip3 install -r requirements.txt --target .` at the project's root.
 
+See how the docs website is deployed for an example of this ([deploy-docs.sh](https://github.com/healeycodes/jar/blob/main/deploy-docs.sh)).
+
 <br>
 """
     return f"""
