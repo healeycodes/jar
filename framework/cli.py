@@ -130,22 +130,21 @@ def build(root):
             request_path = request_path_with_py[: len(
                 request_path_with_py) - len(".py")]
 
-            # load the file
+            # load the module (aka the page)
             spec = importlib.util.spec_from_file_location("", file)
             page = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(page)
 
-            config = {}
+            page_config = {}
             if hasattr(page, 'config') and callable(page.config):
-                config = page.config()
+                page_config = page.config()
 
-            if not 'fresh' in config and not 'regenerate' in config:
+            if not 'fresh' in page_config and not 'regenerate' in page_config:
                 # build page
                 build_page_path = os.path.join(
                     build_dir, f".vercel/output/static/{request_path}")
                 build_page_parent_dir = os.sep.join(
                     build_page_path.split(os.sep)[:-1])
-                # we might need to first create the parent dir
                 Path(build_page_parent_dir).mkdir(parents=True, exist_ok=True)
                 with open(os.path.join(build_dir, f".vercel/output/static/{request_path}"), "w") as f:
                     res = call_render(page)
@@ -165,18 +164,17 @@ def build(root):
                 create_handler(os.path.join(
                     func_dir, "__handler.py"), module_location)
 
-                if 'fresh' in config:
+                if 'fresh' in page_config:
                     # fresh page
                     print(f"fresh page: /{request_path}")
-                elif 'regenerate' in config:
+                elif 'regenerate' in page_config:
                     # regenerated page
-                    every = config.get("regenerate", {}).get('every', None)
+                    every = page_config.get("regenerate", {}).get('every', None)
                     if not every:
                         raise Exception(
                             f"missing `every` key in regenerate config for: {file}"
                         )
-                    fallback = config.get("fallback", True)
-
+                    fallback = page_config.get("fallback", True)
                     fallback_name = f"{request_path}.prerender-fallback"
                     if fallback:
                         with open(os.path.join(build_dir, '.vercel/output/functions', fallback_name), "w") as f:
