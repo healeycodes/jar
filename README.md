@@ -1,6 +1,7 @@
 [![CI](https://github.com/healeycodes/jar/actions/workflows/ci.yml/badge.svg)](https://github.com/healeycodes/jar/actions/workflows/ci.yml)
 
 # Jar 🫙
+> My blog post: [My Own Python Web Framework](https://healeycodes.com/my-own-python-web-framework)
 
 Jar is a toy Python web framework, implemented in about 200 lines of code (see [cli.py](https://github.com/healeycodes/jar/blob/main/framework/cli.py)).
 
